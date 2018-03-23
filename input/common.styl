@@ -1,0 +1,486 @@
+@import url(reset.css)
+
+@media(min-width 1450px)
+	.container
+		max-width 1360px
+body.active
+	position fixed
+	width 100%
+.banner
+	height 800px
+	color #fff
+	text-align right
+	background url() center center no-repeat
+	@media(max-width 768px)
+		height 600px
+	h2
+		padding-top 80px
+		font-size 60px
+		@media(max-width 768px)
+			font-size 30px
+	p
+		font-size 18px
+		@media(max-width 768px)
+			font-size 14px
+	.container
+	.row
+		height 100%
+		box-sizing border-box
+		
+.header
+	position absolute
+	left 0
+	right 0
+	width 100%
+	z-index 10
+	background url() center top no-repeat
+	&.active
+		position fixed
+		top -160px
+		transform translateY(0)
+		transition 0.3s transform,opacity 0.3s
+		z-index 5
+		opacity 0
+		.contact-us
+			display none
+	&.show
+		opacity 1
+		transform translateY(180px)
+		@media(max-width 768px)
+			transform translateY(160px)
+	.contact-us
+		font-size 14px
+		color #b3b3b3
+		line-height 38px
+		background #1d3455
+		mix-blend-mode multiply
+		@media(max-width 768px)
+			display none
+		span
+			margin-left 40px
+			padding-left 30px
+			background url(../img/icon2.png) left center no-repeat
+			&:nth-child(2)
+				background-image url(../img/icon17.png)
+			&:nth-child(3)
+				background-image url(../img/icon15.png)
+	.nav
+		background #1d3455
+		.container
+			position relative
+		.brand
+			position absolute
+			left 0
+			top -20px
+			@media(max-width 768px)
+				position static
+				width 100px
+				height 50px
+				background url(../img/mobile-brand.png) left center/80% auto no-repeat
+			img
+				display none
+		.toggle-menu
+			height 50px
+			width 50px
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			align-items center
+			justify-content flex-end
+			&.active
+				span
+					background-color rgba(0,0,0,0)
+					&:after
+					&:before
+						transition top 0.3s, bottom 0.3s,transform 0.3s 0.3s	
+					&:after
+						bottom 0
+						transform rotate(45deg)
+					&:before
+						top 0
+						transform rotate(-45deg)
+			span
+				position relative
+				width 26px
+				height 2px
+				background #fff
+				transition 0.3s background
+				&:after
+				&:before
+					content ""
+					position absolute
+					top -10px
+					left 0
+					right 0
+					height 2px
+					width 100%
+					background #fff
+					transition top 0.3s 0.3s, bottom 0.3s 0.3s,transform 0.3s
+				&:after
+					top auto
+					bottom -10px
+		.layout
+			position fixed
+			top 0
+			bottom 0
+			left 0
+			right 0
+			z-index 9
+			display none
+			cursor pointer
+			height 100vh
+			&.active
+				@media(max-width 768px)
+					display block
+				&+.link-group
+					transform translateX(0)
+		.link-group
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			@media(max-width 768px)
+				position fixed
+				left 0
+				top 0
+				bottom 0
+				height 100vh
+				flex-direction column
+				width 50%
+				min-width 270px
+				background #1d3455
+				z-index 10
+				padding-right 30px
+				transform translateX(-100%)
+				transition 0.3s
+			.item
+				position relative
+				padding 20px 0
+				margin-left 40px
+				transition 0.3s opacity
+				&.mobile-nav
+					padding 5px 0
+					text-align center
+					color #fff
+					line-height 30px
+					display none
+					h3
+						margin-top 20px
+						padding-top 10px
+						border-top 1px solid #fff
+					&:after
+						display none
+				@media(max-width 768px)
+					padding 10px 0
+					margin-left 30px
+					&.mobile-nav
+						display block
+				&:after
+					content ""
+					position absolute
+					bottom -2px
+					left 0
+					right 0
+					border-bottom 2px solid #f8bc32
+					transition 0.3s
+					transform scale(0)
+				&:hover
+					opacity 0.8
+					&:after
+						transform scale(1)
+				a
+					display block
+					height 40px
+					line-height 40px
+					color #fff
+					font-size 16px
+		
+
+.main
+	.advantage
+		.wrap
+			height 335px
+			transition 0.3s
+			@media(max-width 992px)
+				height 260px
+				padding-bottom 20px
+		.pic
+			height 150px
+			width 100%
+		h3
+			font-size 18px
+			color #2f425d
+			line-height 1.2
+			font-weight 500
+	.custom-made
+		background #f9f9f9
+		.row
+			height 525px
+			@media(max-width 992px)
+				height auto
+		.tips
+			padding 60px 0 0 70px
+			height 100%
+			@media(max-width 1200px)
+				background url('../img/icon5.png') right bottom no-repeat
+			@media(max-width 992px)
+				background none
+			@media(max-width 540px)
+				padding-left 0
+			h3
+				position relative
+				padding 30px 0 20px
+				font-size 24px
+				color #263e52
+				line-height 1
+				&:after
+					content ""
+					position absolute
+					top 0
+					left 0
+					width 26px
+					height 9px
+					background #f8b52c
+			p
+				font-size 14px
+				color #1d3455
+				line-height 24px
+		.pc
+			width 100%
+			padding-bottom 30px
+			text-align right
+			transition 0.3s
+			@media(max-width 1450px)
+				margin-left -200px
+			@media(max-width 992px)
+				margin-left 0
+			img
+				@media(max-width 992px)
+					display block
+					width 100%
+					
+	.swiper-scroll
+		padding 60px 0 70px
+		background #1d3455 url('../img/layout.png') right 10% bottom no-repeat
+		@media(max-width 768px)
+			padding 30px 0
+			.swiper-wrapper
+				flex-wrap wrap
+				justify-content space-around
+			.swiper-slide
+				padding-bottom 30px
+				width auto
+				min-width 150px
+		.wrap
+			max-width 150px
+			width 100%
+			margin 0 auto
+		.pic
+			height 150px
+			border 1px solid #e4e6eb
+			background #fff
+		h3
+			font-size 18px
+			color #263e52
+			line-height 60px
+			border 1px solid #e4e6eb
+			border-top none
+			background #f9f9f9
+			text-align center
+		.left-control
+		.right-control
+			position relative			
+			width 30px
+			height 45px
+			cursor pointer
+			&:after
+				content ""
+				position absolute
+				top 0
+				left 0
+				width 30px
+				height 30px
+				color #fff
+				border 2px solid transparent
+				border-left-color currentColor
+				border-top-color currentColor
+				transform rotateZ(-45deg)
+				transition 0.3s
+			&:hover
+				&:after
+					color #e8b735
+		.right-control
+			&:after
+				border-left-color transparent
+				border-top-color transparent
+				border-right-color currentColor
+				border-bottom-color currentColor
+	.details-function	
+		.title
+			padding 50px 0 70px
+			font-size 60px
+			color #2f425d
+			text-align center
+			font-weight bold
+		.list
+			background url('../img/round.png') center top no-repeat,
+			url('../img/round.png') center 317px no-repeat,
+			url('../img/round.png') center 637px no-repeat,
+			url('../img/round.png') center 957px no-repeat,
+			url('../img/round.png') center 1277px no-repeat,
+			url('../img/round.png') center 1597px no-repeat,
+			url('../img/round.png') center 1917px no-repeat,
+			url('../img/round.png') center 2237px no-repeat,
+			linear-gradient(to bottom,#fff 0% #fff 100%) center bottom/2px 480px no-repeat,
+			linear-gradient(to bottom,#616a79 50%,transparent 50%, transparent 100%) center top/2px 4px repeat-y
+			@media(max-width 1400px)
+				var abc = 276px
+				background url('../img/round.png') center top no-repeat,
+				url('../img/round.png') center abc no-repeat,
+				url('../img/round.png') center abc*2 no-repeat,
+				url('../img/round.png') center abc*3 no-repeat,
+				url('../img/round.png') center abc*4 no-repeat,
+				url('../img/round.png') center abc*5 no-repeat,
+				url('../img/round.png') center abc*6 no-repeat,
+				url('../img/round.png') center abc*7 no-repeat,
+				linear-gradient(to bottom,#fff 0% #fff 100%) center bottom/2px 440px no-repeat,
+				linear-gradient(to bottom,#616a79 50%,transparent 50%, transparent 100%) center top/2px 4px repeat-y
+			@media(max-width 1200px)
+				background none
+		.item
+			&:nth-child(odd)
+				text-align right
+				margin-top -310px
+				@media(max-width 1400px)
+					margin-top -276px
+				@media(max-width 992px)
+					margin-top 0
+			&:last-child
+				.content
+					height 170px
+		.pic
+			img
+				display block
+				width 100%
+				margin 0 auto
+		.content
+			height 315px
+			@media(max-width 1400px)
+				height 276px
+			@media(max-width 576px)
+				height 200px
+			h3
+				font-size 24px
+				color #2f425d
+				line-height 70px
+			p
+				font-size 14px
+				color #666
+				line-height 2
+		
+		
+	.contact-us
+		height 810px
+		border-top 10px solid #f8bc32
+		background url('../img/icon3.jpg') center center no-repeat
+		@media(max-width 768px)
+			height auto
+			padding 50px 0
+	.contact-us
+		.wrap
+			padding 20px 50px 60px
+			border 1px solid #e4e6eb
+			background #fff
+			@media(max-width 768px)
+				padding 30px
+			h3
+				font-size 24px
+				color #2f425d
+				line-height 52px
+			.item
+				padding-top 17px
+				border-bottom 1px solid #2f425d
+				a
+					position relative
+					display block
+					max-width 310px
+					width 100%
+					padding-top 14px
+					font-size 16px
+					color #1d3455
+					line-height 36px
+					padding-left 50px
+					&:after
+						content ""
+						position absolute
+						left 0
+						top 0
+						width 40px
+						height 50px
+						background url() center center no-repeat
+					&.yellow
+						color #f8bc32
+					&.i13
+						&:after
+							background-image url('../img/icon13.png')
+					&.i18
+						&:after
+							background-image url('../img/icon18.png')
+					&.i16
+						&:after
+							background-image url('../img/icon16.png')
+			.go
+				margin-top 50px
+				display block
+				height 65px
+				padding-right 130px
+				font-size 18px
+				color #fff
+				text-align center
+				line-height 65px
+				background #f8bc32 url('../img/icon11.png') right 36px center no-repeat
+				border-radius 5px
+				@media(max-width 768px)
+					margin-top 30px
+
+
+.footer
+	text-align center
+	background #2f425d
+	.copy-right
+		padding 50px 0 30px
+		line-height 1.5
+		font-size 16px
+		color #fff
+		border-bottom 1px solid #6d7b8e
+		@media(max-width 768px)
+			width 90%
+			margin 0 auto
+	.contact-us
+		padding-bottom 14px
+		font-size 14px
+		color #f8bc32
+		line-height 55px
+		@media(max-width 768px)
+			display none!important
+			flex-direction column
+			align-items flex-end!important
+		a
+			display block
+			margin-left 35px
+			padding-left 35px
+			height 60px
+			&:nth-child(1)
+				padding-left 40px
+				background url('../img/icon14.png') left center no-repeat
+			&:nth-child(2)
+				background url('../img/icon19.png') left center no-repeat
+			&:nth-child(3)
+				background url('../img/icon12.png') left center no-repeat
+			@media(max-width 768px)
+				padding-right 30px
+				display block
+				text-align left
