@@ -36,24 +36,52 @@ body.active
 	background url() center top no-repeat
 	&.active
 		position fixed
-		top -160px
+		top -80px
 		transform translateY(0)
 		transition 0.3s transform,opacity 0.3s
 		z-index 5
 		opacity 0
 		.contact-us
 			display none
+		.nav
+			.brand
+				top 6px
+				width 100px
+				img
+					width 100%
+		.contact-us-poa
+			display none
 	&.show
 		opacity 1
-		transform translateY(180px)
+		transform translateY(80px)
 		@media(max-width 768px)
-			transform translateY(160px)
+			transform translateY(80px)
 	.contact-us
 		font-size 14px
 		color #b3b3b3
+		height 38px
 		line-height 38px
 		background #1d3455
 		mix-blend-mode multiply
+		@media(max-width 768px)
+			display none
+		span
+			margin-left 40px
+			padding-left 30px
+			background url(../img/icon2.png) left center no-repeat
+			&:nth-child(2)
+				background-image url(../img/icon17.png)
+			&:nth-child(3)
+				background-image url(../img/icon15.png)
+	.contact-us-poa
+		position absolute
+		top 0
+		left 0
+		right 0
+		height 38px
+		font-size 14px
+		color #b3b3b3
+		line-height 38px
 		@media(max-width 768px)
 			display none
 		span
